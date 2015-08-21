@@ -1,0 +1,31 @@
+<%= form_for(@coach) do |f|%>
+	<p><%= f.label :name %></p>
+	<p><%= f.text_field :name, autofocus: true %></p>
+
+	<p><%= f.label :email %></p>
+	<p><%= f.email_field :email %></p>
+
+	<p><%= f.label :city %></p>
+	<p><%= f.text_field :city %></p>
+
+	<p><%= f.label  :nationality %></p>
+	<p><%= f.text_field :nationality %></p>
+
+	<p><%= f.label :phone %></p>
+	<p><%= f.text_field :phone %></p>
+
+	<p><%= f.label :wechat %></p>
+	<p><%= f.text_field :wechat %></p>
+
+	<p><%= f.label :image %></p>
+	<p><%= f.text_field :image %></p>
+
+	<p><%= f.label :password %></p>
+	<p><%= f.password_field :password %></p>
+
+	<p><%= f.label :password_confirmation %></p>
+	<p><%= f.password_field :password_confirmation %></p>
+
+	<%= f.submit %>
+	
+<% end %>

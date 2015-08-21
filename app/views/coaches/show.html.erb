@@ -1,0 +1,13 @@
+<p><%= image_tag(@coach.image)%></p>	
+<h1><%= @coach.name%></h1>
+<p>Location: <%= @coach.city %></p>
+<p>Nationality: <%= @coach.nationality %><p>
+<br>
+
+<p><strong>Contact info:</strong></p>
+<p>Email: <%= mail_to(@coach.email) %></p>
+<p>Wechat:	<%= link_to(@coach.wechat, "http://www.wechat.com") %></p>
+<p>Cell:	<%= phone_number_link(@coach.phone) %></p>
+
+<%= link_to "Edit Coach", edit_coach_path(@coach) %> |
+<%= link_to "Delete Coach", coach_path(@coach), method: :delete, data: {confirm: "Sure?"}%>
