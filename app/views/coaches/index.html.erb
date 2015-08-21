@@ -1,12 +1,18 @@
 <h2>Coach List</h2>
+<br>
 <% @coaches.each do |c| %>
 	<ul>
 		<li>
-			<h1><%= link_to(c.name, c) %></h1>
-			<p><%= c.city %></p>
-			<%= image_tag(c.image)%>
+			<div class="row">
+        		<div class="col-lg-4">
+        			<img class="img-circle" width="140" height="140"
+          			<%= image_tag(c.image) %>          			
+        	</div><!-- /.col-lg-4 -->
+
+        	<h1> <%= link_to(c.name, c) %></h1>
+			<h5> <%= c.city %></h5>
+		
 		</li>
 		<br>
 	</ul>
 <% end %>
-

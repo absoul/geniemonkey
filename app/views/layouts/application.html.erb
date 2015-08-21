@@ -15,9 +15,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render 'layouts/navbar' %>	
+<%= render 'layouts/navbar' %>
 <%= render 'shared/alerts' %>
-<%= yield %>
+
+<div class="container">	
+	<div class="row">
+		<div class="col-sm-8 blog-main">
+			<%= yield %>
+		</div>
+	</div>
+</div>
+
 
 </body>
 </html>
