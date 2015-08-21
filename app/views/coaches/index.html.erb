@@ -1,18 +1,28 @@
-<h2>Coach List</h2>
-<br>
-<% @coaches.each do |c| %>
-	<ul>
-		<li>
-			<div class="row">
-        		<div class="col-lg-4">
-        			<img class="img-circle" width="140" height="140"
-          			<%= image_tag(c.image) %>          			
-        	</div><!-- /.col-lg-4 -->
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading"><h4>Coaching Staff</h4></div>
 
-        	<h1> <%= link_to(c.name, c) %></h1>
-			<h5> <%= c.city %></h5>
-		
-		</li>
-		<br>
-	</ul>
-<% end %>
+  <!-- Table -->
+  <table class="table table-hover">
+  	<thead>
+      <tr>
+      	<th></th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Nationality</th>
+        <th>Job Description</th>
+      </tr>
+    </thead>
+  	<% @coaches.each do |c| %>
+  		<tr>
+  			<td><%= image_tag(c.image, size:"60x60", class:"img-circle")%></td>
+    		<td><strong><%= c.name %></strong></td>
+    		<td><%= c.city %></td>
+    		<td><%= c.nationality %></td>
+    		<td>Job Description</td>
+  		</tr>
+    <% end %>
+  </table>
+</div>
+
+ 

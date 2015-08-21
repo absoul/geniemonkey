@@ -1,31 +1,52 @@
 <%= form_for(@coach) do |f|%>
-	<p><%= f.label :name %></p>
-	<p><%= f.text_field :name, autofocus: true %></p>
 
-	<p><%= f.label :email %></p>
-	<p><%= f.email_field :email %></p>
+<div class="form-group">
+	<%= f.label :name %> </br>
+	<%= f.text_field :name, class: "form-control", autofocus: true %>
+</div>
 
-	<p><%= f.label :city %></p>
-	<p><%= f.text_field :city %></p>
+<div class="form-group">
+	<%= f.label :email %> </br>
+	<%= f.email_field :email, class: "form-control" %>
+</div>
 
-	<p><%= f.label  :nationality %></p>
-	<p><%= f.text_field :nationality %></p>
+<div class="form-group">
+	<%= f.label :city %> </br>
+	<%= f.text_field :city, class: "form-control" %>
+</div>
 
-	<p><%= f.label :phone %></p>
-	<p><%= f.text_field :phone %></p>
+<div class="form-group">
+	<%= f.label  :nationality %> </br>
+	<%= f.text_field :nationality, class: "form-control" %>
+</div>
 
+<div class="form-group">
+	<%= f.label :phone %> </br>
+	<%= f.text_field :phone, class: "form-control" %>
+</div>
+
+<div class="form-group">
 	<p><%= f.label :wechat %></p>
-	<p><%= f.text_field :wechat %></p>
+	<p><%= f.text_field :wechat, class: "form-control" %></p>
+</div>
 
-	<p><%= f.label :image %></p>
-	<p><%= f.text_field :image %></p>
+<div class="form-group">
+	<%= f.label :image %> </br>
+	<%= f.text_field :image, class: "form-control" %>
+</div>
 
-	<p><%= f.label :password %></p>
-	<p><%= f.password_field :password %></p>
+<div class="form-group">
+	<%= f.label :password %> </br>
+	<%= f.password_field :password, class: "form-control" %>
+</div>
 
-	<p><%= f.label :password_confirmation %></p>
-	<p><%= f.password_field :password_confirmation %></p>
+<div class="form-group">
+	<%= f.label :password_confirmation %> </br>
+	<%= f.password_field :password_confirmation, class: "form-control" %>
+</div>
 
-	<%= f.submit %>
-	
+<div class="actions">
+	<%= f.submit class: "btn btn-primary" %>
+</div>
+
 <% end %>
